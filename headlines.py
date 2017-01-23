@@ -52,6 +52,8 @@ def get_news(publication="bbc"):
     # except Exception as e:
     #     print("crap", e)
     inhere = "ddd"
+    for i in range(10):
+        inhere += str(i)
     files = [f for f in os.listdir('.') if os.path.isfile(f)]
     for f in files:
         inhere += " -/- {}".format(f)
