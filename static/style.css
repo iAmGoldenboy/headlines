@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Josefin+Sans');
+
+
+/* font-family: 'Josefin Sans', sans-serif;
+
+font-family: 'Abril Fatface', cursive; */
+
+body {width: 960px; margin: 0 auto; font-family: 'Josefin Sans', sans-serif;}
+
+h1, h2, h3, h4, th {font-family: 'Abril Fatface', cursive;}
+
+th {text-align: left; font-weight: bold;}
+
+

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Hi, !</h1>
+    <!-- {{ output }} -->
+    <table>
+        <caption>Hvilke artikler har vi haft igennem maskinen</caption>
+          <thead>
+            <tr>
+              <th width='150px'>Avis</th>
+              <th>Sektion</th>
+              <th>Tid</th>
+              <th>Link</th>
+            </tr>
+          </thead> <tbody>
+    {% for article, articledata in output.items() %}
+    <div>
+        <!-- <p>{{ article }} says: <b>{{ articledata }}</b></p> -->
+        <tr> <td>{{ articledata.paper }}</td><td>{{ articledata.section }}</td> <td>{{ articledata.time }}</td><td>{{ article }}</td></tr>
+    </div>
+    {% endfor %}
+    <!-- {{ output }} -->
+    </tbody></table>
+
+{% endblock %}
