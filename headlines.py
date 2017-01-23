@@ -5,6 +5,7 @@
 from flask import Flask, render_template
 import pickle
 import time
+import os
 from lib_Common import bumper
 
 
@@ -50,8 +51,13 @@ def get_news(publication="bbc"):
     #         mystrint += "<br> Avis: {}\t, \t- Tid: {}, Sektion: {}, Link: {}".format(articleData.get("paper"),  articleData.get("time"), articleData.get("section"), article )
     # except Exception as e:
     #     print("crap", e)
+    inhere = ""
+    files = [f for f in os.listdir('.') if os.path.isfile(f)]
+    for f in files:
+        inhere += " -/- {}".format(f)
+        # do something
 
-    return "hello there"
+    return "hello there {}".format(inhere)
 
 @app.route("/avislinks")
 def avislinks():
