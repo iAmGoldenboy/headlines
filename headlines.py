@@ -10,7 +10,7 @@ from lib_Common import bumper
 
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 #BBC_FEED = "http://feeds.bbci.co.uk/news/rss.xml"
 # feedsDict = { "bbc" : "http://feeds.bbci.co.uk/news/rss.xml",
@@ -56,8 +56,8 @@ def get_news(publication="bbc"):
 
     with open("static/data/common.txt", 'r') as rFile:
         outfile = rFile.readlines()
-
     inhere += " ".join(outfile)
+
     for i in range(10):
         inhere += str(i)
     files = [f for f in os.listdir('.') if os.path.isfile(f)]
