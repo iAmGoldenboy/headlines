@@ -52,7 +52,7 @@ def get_news(publication="bbc"):
     # except Exception as e:
     #     print("crap", e)
 
-    inhere = "ddd"
+    inhere = "ddd3242 234 243"
 
     with open("static/data/common.txt", 'r') as rFile:
         outfile = rFile.readlines()
