@@ -38,20 +38,20 @@ def get_news(publication="bbc"):
 #              </html>""".format(publication, first_article.get("title").encode("utf-8"), first_article.get("published").encode("utf-8"), first_article.get("summary").encode("utf-8"), first_article,
 # type(first_article)  )
 
-    with open(articlePickle, 'rb') as handle:
-        aDict = pickle.load(handle)
-    # print("hej")
-    # for id, data in aDict.items():
-    #     print(id,data)
-    mystrint = ""
+    # with open(articlePickle, 'rb') as handle:
+    #     aDict = pickle.load(handle)
+    # # print("hej")
+    # # for id, data in aDict.items():
+    # #     print(id,data)
+    # mystrint = ""
+    #
+    # try:
+    #     for article, articleData in aDict.items():
+    #         mystrint += "<br> Avis: {}\t, \t- Tid: {}, Sektion: {}, Link: {}".format(articleData.get("paper"),  articleData.get("time"), articleData.get("section"), article )
+    # except Exception as e:
+    #     print("crap", e)
 
-    try:
-        for article, articleData in aDict.items():
-            mystrint += "<br> Avis: {}\t, \t- Tid: {}, Sektion: {}, Link: {}".format(articleData.get("paper"),  articleData.get("time"), articleData.get("section"), article )
-    except Exception as e:
-        print("crap", e)
-
-    return mystrint
+    return "hello there"
 
 @app.route("/avislinks")
 def avislinks():
