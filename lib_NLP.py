@@ -408,7 +408,7 @@ def get_news(publication="p-indland", verbose=False):
     # print(feedsDict)
 
     try:
-        with open("articleLinkPickle.p", 'rb') as handle:
+        with open("static/data/articleLinkPickle.p", 'rb') as handle:
             alDict = pickle.load(handle)
 
     except Exception as e:

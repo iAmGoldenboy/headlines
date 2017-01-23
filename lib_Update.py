@@ -7,7 +7,7 @@ import os
 
 def updateArticleLinksPicle(articleLink, epoch, section, paper, verbose=False):
 
-    articlePicle = "articleLinkPickle.p"
+    articlePicle = "static/data/articleLinkPickle.p"
     # articleLink - epoch - section - paper
 
     # open the dict (try)
@@ -53,7 +53,7 @@ def updateArticleLinksPicle(articleLink, epoch, section, paper, verbose=False):
 
 def updateNamedEntityPickle(inputList, articleLink, verbose=False):
 
-    namedEntityPickle = "namedEntityPickle.p"
+    namedEntityPickle = "static/data/namedEntityPickle.p"
 
     print("Input:   ", inputList, articleLink)
 
@@ -95,7 +95,7 @@ def updateNamedEntityPickle(inputList, articleLink, verbose=False):
 
 def updateSocialMediaPickle(articleLinkList, timeValue, verbose=False):
 
-    socialMediaPickle = "socialMediaPickle.p"
+    socialMediaPickle = "static/data/socialMediaPickle.p"
 
     # articleLink - SMtimeList - SM-countList
 

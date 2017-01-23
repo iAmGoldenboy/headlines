@@ -17,7 +17,7 @@ def updatingSocialMedia():
     print("EP time", epoch_time)
 
     # getting social media.
-    with open("articleLinkPickle.p", 'rb') as handle:
+    with open("static/data/articleLinkPickle.p", 'rb') as handle:
         alDict = pickle.load(handle)
 
     collectSocialMediaData = []
