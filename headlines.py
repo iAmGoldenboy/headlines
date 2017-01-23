@@ -51,7 +51,13 @@ def get_news(publication="bbc"):
     #         mystrint += "<br> Avis: {}\t, \t- Tid: {}, Sektion: {}, Link: {}".format(articleData.get("paper"),  articleData.get("time"), articleData.get("section"), article )
     # except Exception as e:
     #     print("crap", e)
+
     inhere = "ddd"
+
+    with open("static/data/common.txt", 'r') as rFile:
+        outfile = rFile.readlines()
+
+    inhere += " ".join(outfile)
     for i in range(10):
         inhere += str(i)
     files = [f for f in os.listdir('.') if os.path.isfile(f)]
