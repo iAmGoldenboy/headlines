@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # import feedparser
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 import pickle
 import time
 import os
@@ -10,7 +10,7 @@ from lib_Common import bumper
 
 
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_folder='', static_url_path='')
 
 #BBC_FEED = "http://feeds.bbci.co.uk/news/rss.xml"
 # feedsDict = { "bbc" : "http://feeds.bbci.co.uk/news/rss.xml",
@@ -54,8 +54,15 @@ def get_news(publication="bbc"):
 
     inhere = "ddd3242 234 243"
 
-    with open("static/data/common.txt", 'r') as rFile:
+    dapth = "static/data/common.txt"
+
+
+    # getter = send_from_directory('static', 'data/common.txt')
+    # print(getter)
+
+    with open(dapth, 'r') as rFile:
         outfile = rFile.readlines()
+
     inhere += " ".join(outfile)
 
     for i in range(10):
