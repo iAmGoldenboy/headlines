@@ -60,10 +60,10 @@ def get_news(publication="bbc"):
     # getter = send_from_directory('static', 'data/common.txt')
     # print(getter)
 
-    with open(dapth, 'r') as rFile:
-        outfile = rFile.readlines()
-
-    inhere += " ".join(outfile)
+    # with open(dapth, 'r') as rFile:
+    #     outfile = rFile.readlines()
+    #
+    # inhere += " ".join(outfile)
 
     for i in range(10):
         inhere += str(i)
