@@ -57,7 +57,7 @@ def get_news(publication="bbc"):
         inhere += " -/- {}".format(f)
         # do something
 
-    return "hello there {}".format(inhere)
+    return render_template("index.html", jammi=inhere)
 
 @app.route("/avislinks")
 def avislinks():

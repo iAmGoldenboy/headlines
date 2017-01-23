@@ -12,6 +12,11 @@
 <body>
 <div>Microblog: <a href="/">Home</a></div>
     <hr>
+    {% if jammi %}
+    <h1>{{ jammi }} - microblog</h1>
+    {% else %}
+    <h1>Welcome to microblog</h1>
+    {% endif %}
     {% block content %}{% endblock %}
 </body>
 </html>
