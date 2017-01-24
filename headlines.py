@@ -74,14 +74,20 @@ def get_news(publication="bbc"):
 
     return render_template("index.html", jammi=inhere)
 
+with open(articlePickle, 'rb') as handle:
+    aDict = pickle.load(handle)
+
+with open(namedEntPickle, 'rb') as handle:
+    neDict = pickle.load(handle)
+
 @app.route("/avislinks")
 def avislinks():
 
-    with open(articlePickle, 'rb') as handle:
-        aDict = pickle.load(handle)
-
-    with open(namedEntPickle, 'rb') as handle:
-        neDict = pickle.load(handle)
+    # with open(articlePickle, 'rb') as handle:
+    #     aDict = pickle.load(handle)
+    #
+    # with open(namedEntPickle, 'rb') as handle:
+    #     neDict = pickle.load(handle)
 
     timedDict = {}
     for id, data in aDict.items():
