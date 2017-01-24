@@ -17,8 +17,8 @@ app = Flask(__name__, static_folder='', static_url_path='')
 #               "cnn" : "http://rss.cnn.com/rss/edition.rss",
 #               "pol" : "http://politiken.dk/rss/indland.rss" }
 
-articlePickle = "static/data/articleLinkPickle.p"
-namedEntPickle = "static/data/namedEntityPickle.p"
+articlePickle = "articleLinkPickle.p"
+namedEntPickle = "namedEntityPickle.p"
 
 @app.route("/")
 # @app.route("/<publication>")
